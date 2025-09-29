@@ -30,4 +30,4 @@ where = ["src"]
 
 # Custom post-install (best-effort)
 [tool.setuptools.cmdclass]
-install = "tools.postinstall.CustomInstall"
+install = "marehmakom.postinstall.CustomInstall"
