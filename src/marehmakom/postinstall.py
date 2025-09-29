@@ -9,6 +9,6 @@ class CustomInstall(install):
         try:
             from marehmakom.download import ensure_assets
             print("[marehmakom] Post-install: ensuring model assets...")
-            ensure_assets(silent=False)
+            ensure_assets()
         except Exception as e:
             print(f"[marehmakom] Post-install skipped/failed: {e}")

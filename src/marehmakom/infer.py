@@ -24,7 +24,7 @@ def _median_filter_1d(probs: torch.Tensor, k: int) -> torch.Tensor:
 class MarehMakomInference:
     def __init__(self, cfg: Config | None = None):
         self.cfg = cfg or Config()
-        tok_path, ckpt_path = ensure_assets(self.cfg, silent=True)
+        tok_path, ckpt_path = ensure_assets(self.cfg)
 
         # tokenizer
         tok_file = tok_path
