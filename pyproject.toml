@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marehmakom"
+version = "0.1.0"
+description = "MarehMakom — LaBSE+FiLM+U-Net span finder for Torah/Talmud quotations"
+authors = [{ name = "Aleksandr Kramar" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "torch>=2.1",
+  "transformers>=4.42",
+  "gdown>=4.7.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/alekselazar/marehmakom"
+
+[project.scripts]
+marehmakom-download = "marehmakom.download:main"
+marehmakom-infer = "marehmakom.infer:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# Custom post-install (best-effort)
+[tool.setuptools.cmdclass]
+install = "tools.postinstall.CustomInstall"
