@@ -21,11 +21,11 @@ Full training code you can see in `/train` dir in this repository
 # Install
 
 ```bash
-pip install git+https://github.com/youruser/marehmakom.git
+pip install git+https://github.com/alekselazar/marehmakom
 ```
 
 After initial install it will download files for tokenizer and model. If you want to fine-tune model and then use new files or just experiment, you can replace original files in cache dir with your files.
- 
+
 # Use
 
 ## As library:
